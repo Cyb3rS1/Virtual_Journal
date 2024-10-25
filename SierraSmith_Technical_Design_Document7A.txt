@@ -1,0 +1,82 @@
+Virtual Journal Program
+Name: Sierra Smith
+Date Created: 10/25/2024
+
+Program Description: 
+
+In this program, you can write any number of sentences beginning with letters
+or numbers; your input is then scanned and matched with a regular expression pattern that defines the criteria of a full sentence. The program reads everything starting with the first character (a letter or number) to the ending mark (a period, question mark, or exclamation point) and stores it as one sentence. After all sentences have been collected, they are displayed and numbered in the order they were submitted. The total number of sentences you typed is also displayed.
+
+Functions used in the Program (list in order as they are called):
+
+1. Function Name: main 
+ 
+     Description: First function to be called, contains every other function in the program. It is only used once.
+
+     Parameters: None  
+
+     Variables: 
+
+	1. DIV(string) – Divider used for making code look neater.
+
+     Logical Steps: 
+
+	1. Prints a welcome message indicating that the program is a virtual journal.
+
+     Returns: None
+
+2. Function Name: write  
+
+     Description: Takes user input, matches it with a regular expression pattern, and displays it all as individual numbered sentences.
+
+     Parameters: None
+
+     Variables: 
+
+	1. pat1(regular expression pattern) – defines the pattern that will be matched to the user input.
+	2. entry(input string) – user input that will be matched to the regular expression pattern.
+	3. lines(list) – where all input matches are stored.
+	4. count(integer) – an accumulated variable representing how many sentences are in the user input.
+
+     Logical Steps: 
+
+	1. Define the regular expression pattern.
+	2. Prompt user for input.
+	3. Use a regular expression method, “re.findall,” to locate all matches in user input.
+	4. Store all the matches into a list.
+	5. Set the count variable to 0.
+	6. Display each match in numbered order and on separate lines.
+	7. Display the total number of sentences that were recorded.
+
+     Returns: None
+
+3. Function Name: another  
+
+     Description: Takes user input where the user can decide to write another entry or exit the program.
+
+     Parameters: None
+
+     Variables: 
+
+	1. Yes(input string) – determining input that restarts the program or exits it
+
+     Logical Steps: 
+
+	1. Prompt the user to enter input. 
+	2. Input gets tested with an “if” statement.
+	3. If the user enters “X” or “x”, the program ends.
+	4. If the user enters a different key, they are taken back to the write() function.
+
+     Returns: None
+
+
+Logical Steps:
+
+	1. Call the main() function
+	2. The write() function is called within the main() function
+	3. The another() function is called within the write() function
+	4. If the user wants to write another entry, steps 2 and 3 repeat
+
+Link to your repository: https://github.com/Cyb3rS1/Virtual_Journal
+
+
